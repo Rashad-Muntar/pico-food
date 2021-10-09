@@ -7,10 +7,12 @@ import AccessibilityNewTwoToneIcon from '@mui/icons-material/AccessibilityNewTwo
 import Button from '@mui/material/Button';
 import ButtonGroup from '@mui/material/ButtonGroup';
 import TextField from '@mui/material/TextField';
+import Food from './food'
+import Menu from './menu';
 
 const Home = () => {
     return (
-    
+        <main className={styles.main}>
         <section className={styles.headerImg}>
             <div className={styles.textContent}>
             <div className={styles.leftContent}>
@@ -18,11 +20,6 @@ const Home = () => {
                 <p className={styles.subText}>Hey! our delicious food is waiting for you, we are always near with finger licking sumcious food</p>
                 <form className={styles.form}>
                     <TextField id="standard-basic" label="Enter location" variant="standard" />
-                    {/* <button type="submit" className={styles.authSearch}>
-                        <ShareLocationOutlinedIcon />
-                    </button>
-                    <button className={styles.search} type="submit">Search</button>
-                    */}
                     <ButtonGroup size="small" variant="contained" aria-label="outlined primary button group">
                         <Button>
                         <ShareLocationOutlinedIcon />
@@ -48,6 +45,22 @@ const Home = () => {
             </div>
             <img className={styles.Img} src={subhead} alt="subheader"/>
         </section>
+
+
+        <section className={styles.foodSection}>
+            <h2 className={styles.header}>Our menu</h2>
+            <div className={styles.border}/>
+            <Menu/>
+        </section>
+
+        <section className={styles.foodSection}>
+            <h2 className={styles.header}>Yummy!! Delicious Dishes</h2>
+            <div className={styles.border}/>
+            <Food />
+        </section>
+
+        </main>
+
     )
 }
 

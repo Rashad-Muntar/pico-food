@@ -1,11 +1,22 @@
+.main{
+    width: 80%;
+    margin: 0 auto; 
+}
 .headerImg{
     background-color: honeydew;
     height: 470px;
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
     border-radius: 10px;
     position: relative;
     overflow: hidden;
+}
+
+.border{
+    background-color: #ff6347;
+    margin-bottom: 50px;
+    height: 3px;
+    width: 100px;
 }
 
 .Img{
@@ -86,4 +97,12 @@
     color: rgb(34, 104, 34);
     margin-right: 10px;
 }
+
+.foodSection{
+    margin-top: 100px;
+}
+
+
+
+
 
