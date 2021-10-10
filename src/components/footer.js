@@ -62,12 +62,12 @@ const Footer = () => {
 
             </div>
             <div className={styles.developerSection}>
-                <div>
-                    <small>Design and developed by Rashad Muntar</small>
+                    <small class={styles.myname}>Design and developed by Rashad Muntar</small>
                     <div>
-                        <Link to=""><GitHubIcon /></Link>
+                        <a href="https://github.com/Rashad-Muntar" target="_blank"><GitHubIcon className={styles.footerSocial}/></a>
+                        <a href="https://www.linkedin.com/in/rashad-muntar/" target="_blank"><LinkedInIcon className={styles.footerSocial}/></a>
+                        <a href="https://twitter.com/RashadToure" target="_blank"><TwitterIcon className={styles.footerSocial}/></a>
                     </div>
-                </div>
             </div>
         </footer>
     )

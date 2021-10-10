@@ -38,14 +38,33 @@
     cursor: pointer;
     margin: 5px 0;
     margin-right: 10px;
+    transition: 500ms;
+}
+
+.footerSocial:hover{
+    color: rgb(49, 51, 70);
 }
 
 .emailSendBtn{
     background-color: indianred;
     color: white;
     border-radius: 7px;
+    transition: 700ms;
+}
+
+.emailSendBtn:hover{
+    background-color: rgb(49, 51, 70);;
+    transform: rotate(-90deg);
 }
 
 .developerSection{
     border-top: 1px solid rgb(226, 226, 226);
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    padding: 15px 0;
+}
+
+.myname{
+    color: rgb(148, 148, 148);
 }

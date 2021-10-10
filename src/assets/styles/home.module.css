@@ -106,6 +106,14 @@
     margin-right: 10px;
 }
 
+.cardsWrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+    width: 100%;
+}
+
 .foodSection{
     margin-top: 100px;
 }

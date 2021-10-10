@@ -1,9 +1,20 @@
+import React, {useState, useContext} from 'react';
 import { Link } from 'react-router-dom';
 import Badge from '@mui/material/Badge';
 import ShoppingBasketTwoToneIcon from '@mui/icons-material/ShoppingBasketTwoTone';
 import FastfoodIcon from '@mui/icons-material/Fastfood';
 import styles from '../assets/styles/navbar.module.css'
-const Navbar = () => {
+import CartContext from '../store/cartContext';
+
+const Navbar = ({showCart}) => {
+    const [foodItem, setFoodItem] = useState(0)
+    const context = useContext(CartContext)
+    console.log(context)
+
+    // const numberOfCartItems = context.items.reduce((curNumber, item) => {
+    //     return curNumber + item.amount
+    // }, 0)
+     
     return (
         <nav className={styles.navbar}>
             <div className={styles.contentWrapper}>
@@ -24,11 +35,11 @@ const Navbar = () => {
                 </Link>
             </div>
             <div className={styles.right}>
-            <Link className={styles.cartLink}>
-                <Badge badgeContent={4} color="primary">
+            <button type="button" className={styles.cartLink} onClick={showCart}>
+                <Badge badgeContent={foodItem} color="primary">
                     <ShoppingBasketTwoToneIcon  />
                  </Badge>
-                </Link>
+            </button>
             </div>
             </div>
         </nav>

@@ -12,7 +12,8 @@ import Menu from './menu';
 import bigimg from '../assets/images/tilapia.png';
 import Footer from './footer';
 
-const Home = () => {
+const Home = ({addtoCart, foodList}) => {
+ 
     return (
         <main className={styles.main}>
         <section className={styles.headerImg}>
@@ -58,7 +59,19 @@ const Home = () => {
         <section className={styles.foodSection}>
             <h2 className={styles.header}>Yummy!! Delicious Dishes</h2>
             <div className={styles.border}/>
-            <Food />
+            <section className={styles.cardsWrapper}>
+            {
+                foodList.map((food) => (
+                    <Food 
+                        title={food.title}
+                        price={food.price}
+                        image={food.image}
+                        description={food.description}
+                        addtoCart={addtoCart}
+                    />
+                ))
+            }
+            </section>
         </section>
 
         <section className={styles.aboutUs}>
