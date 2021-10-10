@@ -2,6 +2,14 @@
     width: 80%;
     margin: 0 auto; 
 }
+
+.headerText{
+    font-family: 'Righteous', cursive;
+}
+
+.header{
+    font-family: 'Righteous', cursive; 
+}
 .headerImg{
     background-color: honeydew;
     height: 470px;
@@ -14,7 +22,7 @@
 
 .border{
     background-color: #ff6347;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     height: 3px;
     width: 100px;
 }
@@ -101,6 +109,53 @@
 .foodSection{
     margin-top: 100px;
 }
+
+.aboutUs{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+
+.aboutUsImage{
+  width: 47%;
+  height: 370px;
+}
+
+.aboutUsTextArea{
+    width: 46%;
+}
+.aboutUserDescription{
+    color: rgb(100, 98, 109);
+    margin-bottom: 20px;
+}
+
+.iconsArea{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.iconItem{
+    width: 45%;
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 0.9em;
+    color: rgb(20, 20, 20)
+}
+
+.aboutIcons{
+    width: 40px;
+    margin-right: 15px;
+}
+
+.makeOrder{
+    border: none;
+    background-color: #ff6347;
+    border-radius: 50px;
+    padding: 10px 20px;
+    color: honeydew;
+}
+
 
 
 

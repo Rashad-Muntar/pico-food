@@ -9,6 +9,8 @@ import ButtonGroup from '@mui/material/ButtonGroup';
 import TextField from '@mui/material/TextField';
 import Food from './food'
 import Menu from './menu';
+import bigimg from '../assets/images/tilapia.png';
+import Footer from './footer';
 
 const Home = () => {
     return (
@@ -59,6 +61,46 @@ const Home = () => {
             <Food />
         </section>
 
+        <section className={styles.aboutUs}>
+            <img src={bigimg} alt="bigimage" className={styles.aboutUsImage}/>
+            <div className={styles.aboutUsTextArea}>
+                <h2 className={styles.header}>We are more than multiple services</h2>
+                <div className={styles.border}/>
+                <p className={styles.aboutUserDescription}>This is the type of restaurant which typically serve food and drinks
+                    in addition to light refreshment such as baked goods or snacks. The 
+                    terms comes from a french word food
+                </p>
+                <div className={styles.iconsArea}>
+                    <p className={styles.iconItem}>
+                    <img className={styles.aboutIcons} src="https://img.icons8.com/external-linector-lineal-color-linector/64/000000/external-order-online-shopping-linector-lineal-color-linector.png" alt="online order"/>
+                        Online Order
+                        </p>
+                    <p className={styles.iconItem}>
+                    <img className={styles.aboutIcons} src="https://img.icons8.com/external-flatart-icons-flat-flatarticons/64/000000/external-reservation-food-flatart-icons-flat-flatarticons.png" alt="reserve"/>
+                        Pre Reservation
+                        </p>
+                    <p className={styles.iconItem}>
+                    <img className={styles.aboutIcons} src="https://img.icons8.com/emoji/48/000000/convenience-store.png" alt="247"/>
+                        24/7 Service
+                        </p>
+                    <p className={styles.iconItem}>
+                    <img className={styles.aboutIcons} src="https://img.icons8.com/external-linector-flat-linector/64/000000/external-restaurant-new-normal-linector-flat-linector.png" alt="restaurant"/>
+                        Organized Foodie Place
+                        </p>
+                    <p className={styles.iconItem}>
+                    <img className={styles.aboutIcons} src="https://img.icons8.com/external-wanicon-flat-wanicon/64/000000/external-kitchen-furniture-and-household-wanicon-flat-wanicon.png" alt="kitchen"/>
+                        Clean Kitchen
+                    </p>
+                    <p className={styles.iconItem}>
+                    <img className={styles.aboutIcons} src="https://img.icons8.com/external-wanicon-lineal-color-wanicon/64/000000/external-chef-cooking-wanicon-lineal-color-wanicon.png" alt="chef"/>
+                        Super Chefs
+                    </p>
+                </div>
+                <button className={styles.makeOrder}>Make order</button>
+            </div>
+        </section>
+
+        <Footer />
         </main>
 
     )
