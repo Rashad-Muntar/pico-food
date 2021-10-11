@@ -1,32 +1,35 @@
 import { Fragment } from 'react';
+import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
 
 import classes from '../assets/styles/modal.module.css';
 
-const Backdrop = (props) => {
-  return <div className={classes.backdrop} />;
-};
+const Backdrop = () => <div className={classes.backdrop} />;
 
-const ModalOverlay = (props) => {
-  return (
-    <div className={classes.modal}>
-      <div className={classes.content}>{props.children}</div>
-    </div>
-  );
-};
+const ModalOverlay = ({ children }) => (
+  <div className={classes.modal}>
+    <div className={classes.content}>{children}</div>
+  </div>
+);
 
 const portalElement = document.getElementById('overlays');
 
-const Modal = (props) => {
-  return (
-    <Fragment>
-      {ReactDOM.createPortal(<Backdrop />, portalElement)}
-      {ReactDOM.createPortal(
-        <ModalOverlay>{props.children}</ModalOverlay>,
-        portalElement
-      )}
-    </Fragment>
-  );
+const Modal = ({ children }) => (
+  <>
+    {ReactDOM.createPortal(<Backdrop />, portalElement)}
+    {ReactDOM.createPortal(
+      <ModalOverlay>{children}</ModalOverlay>,
+      portalElement,
+    )}
+  </>
+);
+
+ModalOverlay.propTypes = {
+  children: PropTypes.node.isRequired,
+};
+
+Modal.propTypes = {
+  children: PropTypes.node.isRequired,
 };
 
 export default Modal;

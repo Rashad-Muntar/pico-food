@@ -1,9 +1,4 @@
-.cart-items {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
+
   .total {
     display: flex;
     justify-content: space-between;
@@ -41,4 +36,22 @@
   .actions .button {
     background-color: #8a2b06;
     color: white;
+  }
+
+  .cartItem{
+    border-bottom: 1px solid rgb(224, 224, 224);
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .title{
+    
+    font-weight: 700;
+    font-size: 1.2em;
+  }
+
+  .price{
+    color: #8a2b06;
+    font-size: 1.2em;
+    font-weight: 700;
   }

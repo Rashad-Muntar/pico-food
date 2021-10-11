@@ -1,14 +1,13 @@
-inittialState = []
+const cartReducer = (state = [], action) => {
+  switch (action.type) {
+    case 'ADD-TO-CART':
+      return [...state, action.food];
 
-const cartReducer = (state=inittialState, action) => {
-    switch (action.type) {
-        case value:
-            
-            break;
-    
-        default:
-            break;
-    }
-}
+    case 'REMOVE_BOOK':
+      return state.filter((book) => book.id !== action.book.id);
+    default:
+      return state;
+  }
+};
 
-export default cartReducer
+export default cartReducer;

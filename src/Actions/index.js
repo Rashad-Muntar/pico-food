@@ -1,9 +1,9 @@
-export const addFoodToCartAction = () => ({
-    type: "ADD-TO-CART",
-    data
-})
+export const addFoodToCartAction = (food) => ({
+  type: 'ADD-TO-CART',
+  food,
+});
 
-export const removeFoodFromCartAction = () => ({
-    type: "REMOVE-FROM-CART",
-    data
-})
+export const removeAction = (book) => ({
+  type: 'REMOVE_BOOK',
+  book,
+});

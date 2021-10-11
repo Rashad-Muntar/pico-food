@@ -1,30 +1,58 @@
-import Modal from '../components/modal';
+/* eslint-disable */
+import React, {useState} from 'react'
+import { useSelector } from 'react-redux';
+import PropTypes from 'prop-types';
+import Modal from './modal';
 import classes from '../assets/styles/cart.module.css';
 
-const Cart = (props) => {
+const Cart = ({ onClose }) => {
+  const foods = useSelector((state) => state);
+  const [total, setTotal] = useState(0)
+  let tot = 0
+  console.log(foods);
+
   const cartItems = (
-    <ul className={classes['cart-items']}>
-      {[{ id: 'c1', name: 'Sushi', amount: 2, price: 12.99 }].map((item) => (
-        <li>{item.name}</li>
+    <div>
+      {foods.map((item) => (
+        <div className={classes.cartItem} key={item.id}>
+        <p className={classes.title}>{item.title}</p>
+        <p className={classes.price}>Ghc{item.price}</p>
+        </div>
       ))}
-    </ul>
+    </div>
   );
 
+  const totalPrice = (
+    <div>
+      {
+        foods.map((item) => {
+          tot += item.price
+        })
+      }
+    </div>
+  )
+
+
+
   return (
-    <Modal onClose={props.onClose}>
+    <Modal onClose={onClose}>
       {cartItems}
       <div className={classes.total}>
         <span>Total Amount</span>
-        <span>35.62</span>
+        <span>Ghc{tot}</span>
       </div>
       <div className={classes.actions}>
-        <button className={classes['button--alt']} onClick={props.onClose}>
+        <button type="button" className={classes['button--alt']} onClick={onClose}>
           Close
         </button>
-        <button className={classes.button}>Order</button>
+        <button type="button" className={classes.button}>Order</button>
       </div>
     </Modal>
   );
+};
+
+Cart.propTypes = {
+  onClose: PropTypes.func.isRequired,
 };
 
 export default Cart;
