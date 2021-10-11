@@ -42,6 +42,7 @@
     border-bottom: 1px solid rgb(224, 224, 224);
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
 
   .title{
@@ -54,4 +55,31 @@
     color: #8a2b06;
     font-size: 1.2em;
     font-weight: 700;
+    padding: 0;
+    margin: 0;
+  }
+
+  .deleteWrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .delete{
+    border: none;
+    background-color: #df9d92;
+    color: rgb(20, 20, 20);
+    padding: 0 5px;
+    border-radius: 5px;
+    margin: 0;
+    margin-left: 20px;
+    transition: 500ms;
+  }
+
+  .delete:hover{
+    background-color: #ff6347;
+    color: rgb(20, 20, 20);
+  }
+
+  .delete:focus{
+    outline: none;
   }

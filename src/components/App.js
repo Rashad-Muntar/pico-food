@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { addFoodToCartAction } from '../Actions';
+import { addFoodToCartAction, removeAction } from '../Actions';
 import Navbar from './navbar';
 import Home from './Home';
 import Cart from './cart';
@@ -28,6 +28,7 @@ const foodData = [
     description: 'With mango and bananas and peach',
   },
   {
+    id: 4,
     title: 'Jollof Rice',
     price: 25,
     image: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwebstockreview.net%2Fimages%2Fgrain-clipart-chicken-fried-rice-8.png&f=1&nofb=1',
@@ -52,7 +53,11 @@ function App() {
 
   const addtoCartHandler = (food) => {
     dispatch(addFoodToCartAction(food));
-    console.log('added to cart');
+  };
+
+  const removeFromCartHandler = (food) => {
+    dispatch(removeAction(food));
+    console.log(food);
   };
 
   return (
@@ -60,7 +65,7 @@ function App() {
     <>
       <Navbar showCart={showCartHandler} cartCount={food.length} />
       <Home foodList={foodData} addtoCart={addtoCartHandler} />
-      {cartIsShown && <Cart onClose={hideCartHandler} />}
+      {cartIsShown && <Cart onClose={hideCartHandler} removeFood={removeFromCartHandler} />}
     </>
   );
 }

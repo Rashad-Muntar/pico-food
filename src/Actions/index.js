@@ -3,7 +3,7 @@ export const addFoodToCartAction = (food) => ({
   food,
 });
 
-export const removeAction = (book) => ({
-  type: 'REMOVE_BOOK',
-  book,
+export const removeAction = (food) => ({
+  type: 'REMOVE_FROM-CART',
+  food,
 });

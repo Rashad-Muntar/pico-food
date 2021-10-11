@@ -4,10 +4,10 @@ import { useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
 import Modal from './modal';
 import classes from '../assets/styles/cart.module.css';
+import DeleteOutlinedIcon from '@mui/icons-material/DeleteOutlined';
 
-const Cart = ({ onClose }) => {
+const Cart = ({ onClose, removeFood }) => {
   const foods = useSelector((state) => state);
-  const [total, setTotal] = useState(0)
   let tot = 0
   console.log(foods);
 
@@ -16,7 +16,10 @@ const Cart = ({ onClose }) => {
       {foods.map((item) => (
         <div className={classes.cartItem} key={item.id}>
         <p className={classes.title}>{item.title}</p>
-        <p className={classes.price}>Ghc{item.price}</p>
+          <div className={classes.deleteWrapper}>
+            <p className={classes.price}>Ghc{item.price}</p>
+            <button onClick={() => removeFood(item)} className={classes.delete} type="button"><DeleteOutlinedIcon /></button>
+          </div>
         </div>
       ))}
     </div>
