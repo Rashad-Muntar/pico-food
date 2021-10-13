@@ -26,7 +26,7 @@ const Home = ({ addtoCart, foodList }) => (
           </p>
           <form className={styles.form}>
             <TextField id="standard-basic" label="Enter location" variant="standard" />
-            <ButtonGroup size="small" variant="contained" aria-label="outlined primary button group">
+            <ButtonGroup size="small" variant="contained" className={styles.groupBtn} aria-label="outlined primary button group">
               <Button>
                 <ShareLocationOutlinedIcon />
                 locate me

@@ -167,13 +167,30 @@
     color: honeydew;
 }
 
-@media screen and (max-width: 468px){
+@media screen and (max-width: 1024px){
     .main{
         width: 90%;
     }
 
+    .form{
+        flex-direction: column;
+      }
+
+      .groupBtn{
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width: 468px){
+    .main{
+        width: 100%;
+    }
+
     .aboutUs{
        flex-direction: column;
+       width: 95%;
+       margin: 0 auto;
+       margin-top: 80px;
     }
 
     .aboutUsImage{
@@ -188,6 +205,53 @@
 
     .iconItem{
         width: 100%;
+    }
+
+    .foodSection{
+       width: 95%;
+       margin: 0 auto;
+       margin-top: 80px;
+    }
+
+    .Img{
+        width: 120%;
+    }
+
+    .overlay{
+        height: 100%;
+        transform: rotate(0deg);
+        
+    }
+    .ul{
+        display: none;
+    }
+
+    .leftContent{
+        width: 98%;
+    }
+
+    .headerImg{
+        background-color: honeydew;
+        height: 370px;
+    }
+
+    .form{
+      flex-direction: column;
+    }
+
+    .groupBtn{
+        margin-top: 10px;
+    }
+
+    .textContent{
+        position: absolute;
+        z-index: 100;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 60%;
+        top: 10%;
+        left: 3%;
     }
 }
 

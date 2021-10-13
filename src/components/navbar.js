@@ -66,12 +66,15 @@ const Navbar = ({ showCart, cartCount }) => {
         <CloseIcon className={styles.closeBtn} onClick={closeMobileMenuHandler} />
         <div className={styles.menuItems}>
           <a href="google.com" className={styles.menuLink}>
+            <img className={styles.mobileMenuIcons} src="https://img.icons8.com/ios/50/000000/menu--v6.png" alt="menu" />
             Menu
           </a>
           <a href="google.com" className={styles.menuLink}>
+            <img className={styles.mobileMenuIcons} src="https://img.icons8.com/ios/50/000000/service-bell.png" alt="service" />
             Services
           </a>
           <a href="google.com" className={styles.menuLink}>
+            <img className={styles.mobileMenuIcons} src="https://img.icons8.com/external-prettycons-lineal-prettycons/49/000000/external-gallery-multimedia-prettycons-lineal-prettycons.png" alt="gelery" />
             Gallery
           </a>
         </div>
