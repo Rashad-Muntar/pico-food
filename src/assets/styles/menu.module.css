@@ -35,6 +35,10 @@
     
 }
 
+.menuIcon{
+    width: 50px;
+}
+
 @media screen and (max-width: 468px){
     .menuCardWrapper{
         flex-wrap: wrap;
