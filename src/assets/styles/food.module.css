@@ -9,10 +9,10 @@
 }
 
 .image{
-    width: 150px;
+    width: 60%;
     margin: 0 auto;
     z-index: 10;
-    margin-bottom: 130px;
+    margin-bottom: 150px;
     
 }
 
@@ -66,4 +66,14 @@ box-shadow: 1.5px 2.5px 15.5px -1px #ddd;
     border: none;
     border-radius: 3px;
     margin: 0;
+}
+
+@media screen and (max-width: 468px){
+    .card{
+        width: 90%;
+    }
+
+    .contentWrapper{
+        width: 50%;
+    }
 }

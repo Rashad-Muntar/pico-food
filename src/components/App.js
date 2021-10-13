@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import Button from '@mui/material/Button';
+import Snackbar from '@mui/material/Snackbar';
+import IconButton from '@mui/material/IconButton';
+import CloseIcon from '@mui/icons-material/Close';
 import { addFoodToCartAction, removeAction } from '../Actions';
 import Navbar from './navbar';
 import Home from './Home';
@@ -40,6 +44,7 @@ const foodData = [
 function App() {
   const [cartIsShown, setCartIsShown] = useState(false);
   const food = useSelector((state) => state);
+  const [open, setOpen] = useState(false);
   console.log(food);
   const dispatch = useDispatch();
 
@@ -53,12 +58,39 @@ function App() {
 
   const addtoCartHandler = (food) => {
     dispatch(addFoodToCartAction(food));
+    setOpen(true);
   };
 
   const removeFromCartHandler = (food) => {
     dispatch(removeAction(food));
     console.log(food);
+    setTimeout(() => {
+      setOpen(false);
+    }, 2000);
   };
+
+  const handleClose = (event, reason) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+    setOpen(false);
+  };
+
+  const action = (
+    <>
+      <Button color="secondary" size="small" onClick={handleClose}>
+        UNDO
+      </Button>
+      <IconButton
+        size="small"
+        aria-label="close"
+        color="inherit"
+        onClick={handleClose}
+      >
+        <CloseIcon fontSize="small" />
+      </IconButton>
+    </>
+  );
 
   return (
 
@@ -66,6 +98,14 @@ function App() {
       <Navbar showCart={showCartHandler} cartCount={food.length} />
       <Home foodList={foodData} addtoCart={addtoCartHandler} />
       {cartIsShown && <Cart onClose={hideCartHandler} removeFood={removeFromCartHandler} />}
+      <Snackbar
+        open={open}
+        autoHideDuration={6000}
+        onClose={handleClose}
+        message="food successfully added"
+        action={action}
+
+      />
     </>
   );
 }

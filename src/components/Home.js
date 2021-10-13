@@ -14,6 +14,7 @@ import subhead from '../assets/images/sub.jpg';
 import styles from '../assets/styles/home.module.css';
 
 const Home = ({ addtoCart, foodList }) => (
+
   <main className={styles.main}>
     <section className={styles.headerImg}>
       <div className={styles.textContent}>
