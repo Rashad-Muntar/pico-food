@@ -1,12 +1,12 @@
 /* eslint-disable */
-import React, {useState} from 'react'
+import React from 'react'
 import { useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
 import Modal from './modal';
 import classes from '../assets/styles/cart.module.css';
 import DeleteOutlinedIcon from '@mui/icons-material/DeleteOutlined';
 
-const Cart = ({ onClose, removeFood }) => {
+const Cart = ({ onClose, removeFood, onOrder, orderBtn}) => {
   const foods = useSelector((state) => state);
   let tot = 0
   console.log(foods);
@@ -35,8 +35,6 @@ const Cart = ({ onClose, removeFood }) => {
     </div>
   )
 
-
-
   return (
     <Modal onClose={onClose}>
       {cartItems}
@@ -48,7 +46,7 @@ const Cart = ({ onClose, removeFood }) => {
         <button type="button" className={classes['button--alt']} onClick={onClose}>
           Close
         </button>
-        <button type="button" className={classes.button}>Order</button>
+        <button type="button" onClick={() => onOrder()} className={classes.button}>{orderBtn}</button>
       </div>
     </Modal>
   );

@@ -42,9 +42,9 @@ const foodData = [
 
 function App() {
   const [cartIsShown, setCartIsShown] = useState(false);
+  const [oderText, setOrderText] = useState('Order food');
   const food = useSelector((state) => state);
   const [open, setOpen] = useState(false);
-  console.log(food);
   const dispatch = useDispatch();
 
   const showCartHandler = () => {
@@ -62,7 +62,6 @@ function App() {
 
   const removeFromCartHandler = (food) => {
     dispatch(removeAction(food));
-    console.log(food);
     setTimeout(() => {
       setOpen(false);
     }, 2000);
@@ -73,6 +72,14 @@ function App() {
       return;
     }
     setOpen(false);
+  };
+
+  const orderHandler = () => {
+    setOrderText('Order...');
+    setTimeout(() => {
+      setCartIsShown(false);
+      setOrderText('Order food');
+    }, 3000);
   };
 
   const action = (
@@ -93,7 +100,15 @@ function App() {
     <>
       <Navbar showCart={showCartHandler} cartCount={food.length} />
       <Home foodList={foodData} addtoCart={addtoCartHandler} />
-      {cartIsShown && <Cart onClose={hideCartHandler} removeFood={removeFromCartHandler} />}
+      {cartIsShown
+      && (
+      <Cart
+        onClose={hideCartHandler}
+        removeFood={removeFromCartHandler}
+        orderBtn={oderText}
+        onOrder={orderHandler}
+      />
+      )}
       <Snackbar
         open={open}
         autoHideDuration={6000}
