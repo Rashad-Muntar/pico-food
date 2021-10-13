@@ -16,7 +16,7 @@ const Footer = () => (
       <FastfoodIcon className={styles.foodIcon} />
     </div>
     <div className={styles.contentWrapper}>
-      <div>
+      <div className={styles.section}>
         <h5 className={styles.footerTitles}>Subscribe to our new letter</h5>
         <div>
           <TextField id="standard-basic" label="Enter your email" variant="standard" />
@@ -27,35 +27,43 @@ const Footer = () => (
         <InstagramIcon className={styles.footerSocial} />
         <YouTubeIcon className={styles.footerSocial} />
       </div>
-      <div>
+      <div className={styles.section}>
         <h5 className={styles.footerTitles}>Services</h5>
-        <p className={styles.footerLinks}>Online Order</p>
-        <p className={styles.footerLinks}>Pre Reservation</p>
-        <p className={styles.footerLinks}>24/7 Service</p>
-        <p className={styles.footerLinks}>Organized Foodie Place</p>
-        <p className={styles.footerLinks}>Clean Kitchen</p>
-        <p className={styles.footerLinks}>Super Chefs</p>
+        <div className={styles.linksWrapper}>
+          <p className={styles.footerLinks}>Online Order</p>
+          <p className={styles.footerLinks}>Pre Reservation</p>
+          <p className={styles.footerLinks}>24/7 Service</p>
+          <p className={styles.footerLinks}>Organized Foodie Place</p>
+          <p className={styles.footerLinks}>Clean Kitchen</p>
+          <p className={styles.footerLinks}>Super Chefs</p>
+        </div>
       </div>
-      <div>
+      <div className={styles.section}>
         <h5 className={styles.footerTitles}>Quick links</h5>
-        <p className={styles.footerLinks}>Menu</p>
-        <p className={styles.footerLinks}>Reviews</p>
-        <p className={styles.footerLinks}>Blog</p>
-        <p className={styles.footerLinks}>Reserve table</p>
-        <p className={styles.footerLinks}>Order foods</p>
+        <div className={styles.linksWrapper}>
+          <p className={styles.footerLinks}>Menu</p>
+          <p className={styles.footerLinks}>Reviews</p>
+          <p className={styles.footerLinks}>Blog</p>
+          <p className={styles.footerLinks}>Reserve table</p>
+          <p className={styles.footerLinks}>Order foods</p>
+        </div>
       </div>
-      <div>
+      <div className={styles.section}>
         <h5 className={styles.footerTitles}>About</h5>
-        <p className={styles.footerLinks}>Our Story</p>
-        <p className={styles.footerLinks}>Benefit</p>
-        <p className={styles.footerLinks}>Career</p>
-        <p className={styles.footerLinks}>Our Chef</p>
+        <div className={styles.linksWrapper}>
+          <p className={styles.footerLinks}>Our Story</p>
+          <p className={styles.footerLinks}>Benefit</p>
+          <p className={styles.footerLinks}>Career</p>
+          <p className={styles.footerLinks}>Our Chef</p>
+        </div>
       </div>
-      <div>
+      <div className={styles.section}>
         <h5 className={styles.footerTitles}>Contact</h5>
-        <p className={styles.footerLinks}>Contact</p>
-        <p className={styles.footerLinks}>Support</p>
-        <p className={styles.footerLinks}>FAQ</p>
+        <div className={styles.linksWrapper}>
+          <p className={styles.footerLinks}>Contact</p>
+          <p className={styles.footerLinks}>Support</p>
+          <p className={styles.footerLinks}>FAQ</p>
+        </div>
       </div>
 
     </div>

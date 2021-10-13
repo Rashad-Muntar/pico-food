@@ -1,7 +1,5 @@
 .footer{
     margin-top: 100px;
-    /* border-top: 1px solid rgb(226, 226, 226);
-    padding: 50px 0; */
 }
 .contentWrapper{
     border-top: 1px solid rgb(226, 226, 226);
@@ -67,4 +65,24 @@
 
 .myname{
     color: rgb(148, 148, 148);
+}
+
+@media screen and (max-width: 468px){
+    .contentWrapper{
+       flex-direction: column;
+    }
+
+    .section{
+        margin-top: 40px;
+    }
+
+    .linksWrapper{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .footerLinks{
+        width: 49%;
+    }
 }

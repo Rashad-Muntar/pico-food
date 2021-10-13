@@ -46,7 +46,7 @@ const Cart = ({ onClose, removeFood, onOrder, orderBtn}) => {
         <button type="button" className={classes['button--alt']} onClick={onClose}>
           Close
         </button>
-        <button type="button" onClick={() => onOrder()} className={classes.button}>{orderBtn}</button>
+        <button type="button" onClick={() => onOrder()} className={classes.button} displ>{orderBtn}</button>
       </div>
     </Modal>
   );

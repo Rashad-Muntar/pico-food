@@ -14,23 +14,25 @@ const Navbar = ({ showCart, cartCount }) => (
         <span className={styles.span}>FOOD</span>
       </a>
 
-      <div className={styles.menuItems}>
-        <a href="google.com" className={styles.menuLink}>
-          Menu
-        </a>
-        <a href="google.com" className={styles.menuLink}>
-          Services
-        </a>
-        <a href="google.com" className={styles.menuLink}>
-          Gallery
-        </a>
-      </div>
-      <div className={styles.right}>
-        <button type="button" className={styles.cartLink} onClick={showCart}>
-          <Badge badgeContent={cartCount} color="primary">
-            <ShoppingBasketTwoToneIcon />
-          </Badge>
-        </button>
+      <div className={styles.navLinksArea}>
+        <div className={styles.menuItems}>
+          <a href="google.com" className={styles.menuLink}>
+            Menu
+          </a>
+          <a href="google.com" className={styles.menuLink}>
+            Services
+          </a>
+          <a href="google.com" className={styles.menuLink}>
+            Gallery
+          </a>
+        </div>
+        <div className={styles.right}>
+          <button type="button" className={styles.cartLink} onClick={showCart}>
+            <Badge badgeContent={cartCount} color="primary">
+              <ShoppingBasketTwoToneIcon />
+            </Badge>
+          </button>
+        </div>
       </div>
     </div>
   </nav>

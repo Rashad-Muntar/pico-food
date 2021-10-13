@@ -11,6 +11,11 @@
   .actions {
     text-align: right;
   }
+
+  .disable{
+    cursor: not-allowed;
+    background-color: rgb(229, 229, 229) !important;
+}
   
   .actions button {
     font: inherit;

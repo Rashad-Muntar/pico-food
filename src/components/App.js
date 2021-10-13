@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import Snackbar from '@mui/material/Snackbar';
+import CheckIcon from '@mui/icons-material/Check';
 import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
 import { addFoodToCartAction, removeAction } from '../Actions';
@@ -77,9 +78,12 @@ function App() {
   const orderHandler = () => {
     setOrderText('Order...');
     setTimeout(() => {
+      setOrderText(<CheckIcon />);
+    }, 2000);
+    setTimeout(() => {
       setCartIsShown(false);
       setOrderText('Order food');
-    }, 3000);
+    }, 4000);
   };
 
   const action = (

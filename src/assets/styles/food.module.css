@@ -1,12 +1,41 @@
+.card {
+    width: 23%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: 400ms;
+    -webkit-box-shadow: 1.5px 2.5px 15.5px -1px #ddd;
+    -moz-box-shadow: 1.5px 2.5px 15.5px -1px #ddd;
+    box-shadow: 1.5px 2.5px 15.5px -1px #ddd;
+}
 
+.card:hover{
+    background-color: rgb(246, 252, 255);
+}
+
+.image{
+    width: 60%;
+    margin: 0 auto;
+}
+
+.contentWrapper{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 5px 10px;
+}
+
+/* 
 .card{
-    height: auto;
-    width: 230px;
+    height: 200px;
+    width: 24%;
     display: flex;
     justify-content: center;
     flex-direction: column;
     position: relative;
 }
+
 
 .image{
     width: 60%;
@@ -20,7 +49,6 @@
     margin-top: 50px;
     width: 100%;
     position: absolute;
-    /* background-color: honeydew; */
     border-top-left-radius: 250px;
     border-top-right-radius: 2500px;
     padding: 20px 15px;
@@ -34,7 +62,7 @@ box-shadow: 1.5px 2.5px 15.5px -1px #ddd;
 .contentWrapper:hover{
     border-top-left-radius: 0;
     border-top-right-radius: 0;  
-}
+} */
 
 .foodTitle{
     font-weight: 700;
@@ -60,20 +88,24 @@ box-shadow: 1.5px 2.5px 15.5px -1px #ddd;
 }
 
 .cardCart{
-    font-size: 0.8em;
+    font-size: 0.9em;
     font-weight: 800;
     background-color: rgb(203, 247, 201);
     border: none;
     border-radius: 3px;
     margin: 0;
+    transition: 400ms;
+}
+
+.cardCart:hover{
+    background-color: rgb(145, 196, 142);
+    color: rgb(255, 250, 241);
 }
 
 @media screen and (max-width: 468px){
     .card{
-        width: 90%;
-    }
+        width: 100%;
+        margin-bottom: 30px;
 
-    .contentWrapper{
-        width: 50%;
     }
 }
