@@ -91,4 +91,8 @@
         margin: 0 auto;
         margin-top: 80px;
     }
+
+    .myname{
+        font-size: 0.7em;
+    }
 }

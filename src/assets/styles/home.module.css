@@ -242,6 +242,7 @@
     .overlay{
         height: 100%;
         transform: rotate(0deg);
+        left: 0;
         
     }
     .ul{
