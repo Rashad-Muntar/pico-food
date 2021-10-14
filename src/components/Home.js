@@ -48,7 +48,7 @@ const Home = ({ addtoCart, foodList }) => (
           </li>
           <li className={styles.li}>
             <AccessibilityNewTwoToneIcon className={styles.deliver} />
-            Great Custoemr support
+            Great Customer support
           </li>
         </ul>
       </div>
